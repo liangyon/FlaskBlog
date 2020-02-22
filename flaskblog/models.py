@@ -31,3 +31,12 @@ class Post(db.Model):
 
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
+
+
+class Player(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    player_id = db.Column(db.String(120), nullable=True)
+    name = db.Column(db.String(20), unique=True, nullable=True)
+
+    def __repr__(self):
+        return f"Player('{self.id}', '{self.name}')"
