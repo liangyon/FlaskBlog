@@ -1,0 +1,30 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<!--   <article class="media content-section">
+    <img class ="rounded-circle article-img" src="{{url_for('static', filename='profile_pics/' + post.author.image_file)}}">
+    <div class="media-body">
+      <div class="article-metadata">
+        <a class="mr-2" href="#">{{ player.name }}</a>
+        <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+      </div>
+      <h2><class="article-title"> {{ player.id}}</h2>
+      <p class="article-content">{{ player.id }}</p>
+    </div>
+  </article> -->
+      {% for player in players%}
+      {print(players)}
+        <article class="media content-section">
+          <img class ="rounded-circle article-img" src="{{url_for('static', filename='profile_pics/334ebd90270b8ace.png')}}">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ player.id }}</a>
+            </div>
+            <h2><a class="article-title" href="{{url_for('players.player', id=id)}}">{{ player.id}}</a></h2>
+            <p class="article-content">{{ player.name }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
+
+
